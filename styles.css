@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 832px;
+    width: 832px;
+    flex-wrap: wrap;
+    background-color: aqua;
+}
+
+.square {
+    border: 1px solid black;
+    /* 116px */
+    flex: 0 0 50px;
+    height: 50px;
+    background-color: bisque;
+}
