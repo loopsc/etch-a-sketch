@@ -1,14 +1,15 @@
 body {
   background-color: rgb(27, 34, 34);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #container {
   display: flex;
   flex-wrap: wrap;
-  height: 960px;
-  width: 960px;
-
-  background-color: aquamarine;
+  height: 500px;
+  width: 500px;
 }
 
 .cell {
@@ -16,9 +17,6 @@ body {
   border: 0.1px solid black;
   width: 50px;
   height: 50px;
-
-  padding: 0;
-  margin: 0;
 
   background-color: bisque;
 }

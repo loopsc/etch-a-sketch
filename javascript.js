@@ -1,10 +1,8 @@
 const container = document.querySelector("#container");
 const inputGridButton = document.querySelector(".squares-input");
 const startingGrid = 16;
-const containerSize = 960;
-
+const containerSize = 500;
 let cellDimensions = containerSize/startingGrid
-
 let gridList = document.querySelectorAll(".cell");
 
 drawGrid(startingGrid);
@@ -43,7 +41,14 @@ function drawGrid(numGrid) {
 
   gridList.forEach((grid) => {
     grid.addEventListener("mouseover", () => {
-      grid.style.backgroundColor = "grey";
+      grid.style.backgroundColor = getRandomRGB();
     });
   });
+}
+
+function getRandomRGB() {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  return `rgb(${r},${g},${b})`
 }
