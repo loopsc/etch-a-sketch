@@ -9,13 +9,6 @@ let gridList = document.querySelectorAll(".cell");
 
 drawGrid(startingGrid);
 
-
-gridList.forEach((grid) => {
-  grid.addEventListener("mouseover", () => {
-    grid.style.backgroundColor = "grey";
-  });
-});
-
 inputGridButton.addEventListener("click", () => {
   userInputGrids = prompt("Number of squares per side?");
   while (userInputGrids > 100) {
@@ -23,7 +16,7 @@ inputGridButton.addEventListener("click", () => {
   }
 
   removeGrid();
-  
+
   cellDimensions = containerSize / userInputGrids
 
   drawGrid(userInputGrids);
@@ -47,4 +40,10 @@ function drawGrid(numGrid) {
     }
   }
   gridList = document.querySelectorAll(".cell");
+
+  gridList.forEach((grid) => {
+    grid.addEventListener("mouseover", () => {
+      grid.style.backgroundColor = "grey";
+    });
+  });
 }

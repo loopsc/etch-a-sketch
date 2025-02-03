@@ -1,6 +1,6 @@
-/* body {
-    margin: 0 auto;
-} */
+body {
+  background-color: rgb(27, 34, 34);
+}
 
 #container {
   display: flex;
